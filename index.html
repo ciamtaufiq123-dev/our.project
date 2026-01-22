@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Game</h1>
+        <div id="quiz-container">
+            <div id="question-container" class="fade-in">
+                <h2 id="question-text"></h2>
+                <div id="options">
+                    <!-- Options will be populated by JS -->
+                </div>
+                <button id="submit-btn" class="btn animated-btn">Submit Jawaban</button>
+                <button id="next-btn" class="btn animated-btn" style="display: none;">Next</button>
+            </div>
+            <div id="result-container" style="display: none;">
+                <h2>Quiz Selesai!</h2>
+                <p id="score-text"></p>
+                <button class="btn animated-btn" onclick="restartQuiz()">Restart</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
